@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrei - Portofolio</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "wWYe2fe1jnUlRqjFA",
+          });
+       })();
+    </script>
+
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="closeOpen advanced1">
+                <div class="bodymovinanim"></div>
+            </div>
+            <div class="logoHome advanced"><ion-icon name="home"></ion-icon></div>
+            <div class="aboutLinks advanced">
+                <ul>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#maps">Map</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                </ul>
+            </div>
+            <div class="footerButton">
+                <button onclick="scrollToContainer()" class="advanced">
+                    <div class="text">Contact</div>
+                    <div class="icon"><ion-icon name="arrow-forward-outline"></ion-icon></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="aboutMe" class="aboutMe">
+        <div class="title"><h1>about &nbspMe.</h1></div>
+        <div class="info">
+            <p>I am a passionate and dedicated student with a strong foundation in front-end development.
+                I specialize in turning ideas into reality using clean, semantic HTML and modern CSS, with a focus on creating responsive and accessible websites. 
+                I love the challenge of building beautiful, user-friendly interfaces from the ground up and am always eager to learn new technologies to expand my skill set.
+                <br><br>I'm currently seeking opportunities to apply my skills to real-world projects and grow as a developer.
+            </p>
+        </div>
+        <div class="subject">
+            <div class="studied">
+                <div class="head">
+                    <h1>GCSE GRADES</h1>
+                    <p>Navigate to see my gcse grades</p>
+                </div>
+                <div class="slider" id="slider" data-mouse-down-at="0" data-prev-percentage="0">
+                    <div class="slide">
+                        <div class="photo">
+                            <img src="about pictures/mathBg.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="text">
+                            <h2>Mathematics</h2>
+                            <p>Grade - 9</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="photo">
+                            <img src="about pictures/furtherMathsBg.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="text">
+                            <h2>Further Math</h2>
+                            <p>Grade - 9</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="photo">
+                            <img src="about pictures/physicsBg.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="text">
+                            <h2>Physics</h2>
+                            <p>Grade - 9</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="photo">
+                            <img src="about pictures/biologyBg.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="text">
+                            <h2>Biology</h2>
+                            <p>Grade - 8</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="photo">
+                            <img src="about pictures/chemistryBg.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="text chemtext">
+                            <h2>Chemistry</h2>
+                            <p>Grade - 8</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="photo">
+                            <img src="about pictures/computerScienceBg.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="text">
+                            <h2>Computer <br> Science</h2>
+                            <p>Grade - 8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="studying">
+                <div class="head">
+                    <h1>Studying subjects</h1>
+                    <p>Check out subjects I am studying</p>
+                </div>
+                <div class="line">
+                    <div class="circle"></div>
+                </div>
+                <div class="box fadeLeft boxdesign">
+                    <div class="boxfrontdesign">
+                        <h2>Mathematics | A level</h2>
+                        <div class="holder">
+                            <h3>Study range:</h3>
+                            <p>08/09/25 -> 20/06/27</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1 fadeRight boxdesign">
+                    <div class="boxfrontdesign">
+                        <h2>Computing | Btec</h2>
+                        <div class="holder">
+                            <h3>Study range:</h3>
+                            <p>08/09/25 -> 20/06/27</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 fadeLeft boxdesign">
+                    <div class="boxfrontdesign">
+                        <h2>Physics | A level</h2>
+                        <div class="holder">
+                            <h3>Study range:</h3>
+                            <p>08/09/25 -> 20/06/27</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="maps" class="maps">
+        <div class="header_maps">
+            <h1>World Show.</h1>
+            <h1>Tour around the Globe.</h1>
+            <p>Exploring the world history for Computer Science in a fun way! Showing you where it all happened and events that led to this technologies that we now have.</p>
+        </div>
+        <div class="map_and_info">
+            <div class="map_container">
+                <div class="map" id="world-map">
+
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="sticky-text-wrapper">
+                    <div class="content is-first" data-step="0">
+                        <h1>1936-1939: Turing's Theoretical Leap</h1>
+                        <p>Before the "Bombe" existed, Alan Turing moved from <b>Cambridge University</b>, where he conceived the Universal Turing Machine, to <b>Bletchley Park</b>. This transition from theoretical mathematics to the practical, high-stakes world of wartime codebreaking changed history. At Bletchley, he revolutionized the "Enigma" decryption process, turning a quiet country estate into the most important intelligence site in the world.</p>
+                    </div>
+
+                    <div class="content" data-step="1">
+                        <h1>1945: The ENIAC Giant</h1>
+                        <p>At the <b>University of Pennsylvania</b> in Philadelphia, the ENIAC was born. It was a massive 30-ton machine that proved electronic computing was faster than any human "computer." It laid the groundwork for all modern hardware, though programming it required physically re-plugging cables and flipping thousands of switches by hand.</p>
+                    </div>
+
+                    <div class="content" data-step="2">
+                        <h1>1952: Grace Hopper & The First Compiler</h1>
+                        <p>Admiral Grace Hopper traveled from her research at <b>Harvard University</b> in Cambridge, MA, to <b>Philadelphia</b> to work on the UNIVAC. It was here she developed the first compiler, A-0. She famously argued that "code should be written in English," leading directly to the creation of COBOL, the language that still powers much of the world's banking systems today.</p>
+                    </div>
+
+                    <div class="content" data-step="3">
+                        <h1>1969: Apollo 11 - To the Moon</h1>
+                        <p>Software engineering as a discipline was pioneered by Margaret Hamilton. Her team at <b>MIT in Cambridge, MA</b>, developed the onboard flight software for the Apollo missions. This code traveled with the astronauts to <b>Houston, Texas (NASA)</b>, and eventually to the Moon. Her "priority displays" saved the Apollo 11 landing when the computer became overloaded just minutes before touchdown.</p>
+                    </div>
+
+                    <div class="content" data-step="4">
+                        <h1>1973: The Mouse & The GUI</h1>
+                        <p>In <b>Palo Alto, California</b>, the Xerox PARC team invented the "Alto." This was the first computer to use a mouse and a graphical interface. It represented the moment computers stopped being tools for scientists and started being tools for everyone, inspiring both Apple and Microsoft in the years to follow.</p>
+                    </div>
+
+                    <div class="content is-last" data-step="5">
+                        <h1>1990: Connecting the Planet</h1>
+                        <p>Tim Berners-Lee, working at <b>CERN in Geneva, Switzerland</b>, created the World Wide Web. By combining the existing Internet with hypertext, he allowed information to be shared globally and freely. This was the final step in turning a collection of isolated machines into a single, global "World Show."</p>
+                    </div>
+                </div>
+                <div class="step_trigger" data-target="blank"></div>
+                <div class="step_trigger" data-target="0"></div>
+                <div class="step_trigger" data-target="1"></div>
+                <div class="step_trigger" data-target="2"></div>
+                <div class="step_trigger" data-target="3"></div>
+                <div class="step_trigger" data-target="4"></div>
+                <div class="step_trigger" data-target="5"></div>
+            </div>
+        </div>
+    </section>
+    <section class="weather" id="weather">
+        <div class="weather_header">
+            <h1>Get your<br>Weather.</h1>
+            <div class="weather_widget_line"></div>
+            <div class="weather_widget">
+                <div class="widget">
+                    <div class="box">
+                        <img src="about pictures/thermometer.png" alt="Weather icon" draggable="false" width="50" height="50">
+                        <div class="holder"><p>Temperature</p></div>
+                    </div>
+                    <div class="box">
+                        <img src="about pictures/wind.png" alt="Weather icon" draggable="false" width="50" height="50">
+                        <div class="holder"><p>Wind<br>pattern</p></div>
+                    </div>
+                    <div class="box">
+                        <img src="about pictures/ultraviolet.png" alt="Weather icon" draggable="false" width="50" height="50">                       
+                        <div class="holder"><p>UV<br>index</p></div>
+                    </div>
+                    <div class="box">
+                        <img src="about pictures/ac.png" alt="Weather icon" draggable="false" width="50" height="50">                       
+                        <div class="holder"><p>Condition</p></div>
+                    </div>
+                    <div class="box">
+                        <img src="about pictures/rain.png" alt="Weather icon" draggable="false" width="50" height="50">                     
+                        <div class="holder"><p>Precipitation</p></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="weather-app">
+
+            <div class="video-bg">
+            <video autoplay loop muted playsinline id="weather-bg-video">
+                <source src="about_vids/clear.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div> </div>
+
+
+            <div class="search-box">
+                <div class="input-wrapper">
+                    <input type="text" id="city-input" placeholder="Enter city name..." spellcheck="false" autocomplete="off">
+                    <div id="suggestions" class="suggestions-list"></div>
+                </div>
+                <button id="search-btn">Search</button>
+            </div>
+        
+            <div class="weather-display" id="weather-content">
+                <div class="info-no-data">
+                    <h1>Search to see weather</h1>
+                </div>
+            
+                <div class="main-info">
+                    <h2 id="location">City Name</h2>
+                    <p id="condition">Search to see weather</p>
+                </div>
+            
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="label">Actual Temp</span>
+                        <span class="value"><span id="temperature">--</span>°C</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Feels Like</span>
+                        <span class="value"><span id="feels-like">--</span>°C</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Precipitation</span>
+                        <span class="value" id="precip">-- mm</span>
+                    </div>
+                
+                    <div class="detail-item">
+                        <span class="label">Wind Speed</span>
+                        <span class="value" id="wind-speed">-- km/h</span>
+                    </div>
+                    <div class="detail-item compass-card">
+                        <div class="compass-header">
+                            <span>WIND</span>
+                        </div>
+                        <div class="compass">
+                            <div class="ticks-container" id="ticks-container"></div>
+
+                            <div class="cardinals">
+                                <span class="n">N</span>
+                                <span class="e">E</span>
+                                <span class="s">S</span>
+                                <span class="w">W</span>
+                            </div>
+                        
+                            <div class="hub">
+                                <span class="degree-val" id="wind-dir-val">--</span>
+                                <span class="degree-unit">°</span>
+                            </div>
+                        
+                            <div class="needle-wrapper" id="needle-wrapper">
+                                 <div class="needle-top">
+                                    <div class="needle-arrow"></div>
+                                 </div>
+                                 <div class="needle-bottom">
+                                    <div class="needle-circle"></div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">UV Index</span>
+                        <span class="value" id="uv-index">--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+    </section>
+
+    <footer>
+        <div class="footerContainer" id="footerContainer">
+            <div class="getInTouch">
+                <h1>Get in touch with me</h1>
+                <p>Give me your email and I will shortly be get in touch with you.</p>
+                <form id="contactForm">
+                    <div class="nameHolder">
+                        <input type="text" name="inTouchName" id="inTouchName" placeholder="Enter your name..." required>
+                    </div>
+                    <div class="emailHolder">
+                        <input type="email" name="inTouchEmail" id="inTouchEmail" placeholder="Enter your email..." required>
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="connect">
+                <h1>Connect:</h1>
+                <div class="appsHolder">
+                    <div class="instaHolder "><a class="logoHolder"><ion-icon name="logo-instagram"></ion-icon></a></div>
+                    <div class="gitHubHolder "><a class="logoHolder"><ion-icon name="logo-github"></ion-icon></a></div>
+                </div>
+            </div>
+            <div class="info">
+                <h1>My brief</h1>
+                <p>
+                    I am a self taught front end developer trying to learn backend aswell.<br>
+                    I am still not the best however any support or opportunities you can offer me are highly appreciated.<br><br>
+                    Currently studying at: <br><span>LongRoad sixth form college</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script src="about.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+</body>
+</html>

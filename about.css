@@ -1,0 +1,1350 @@
+:root{
+    --font-family:"Poppins", sans-serif ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    padding: 0;
+    width: 100%;
+}
+body{
+    font-family: var(--font-family);
+    background-color: #080808;
+}
+header{
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header nav{
+    width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header .logoHome{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(20px);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+header .logoHome:hover{
+    box-shadow: 
+        inset  0px 0px 10px rgb(0, 0, 0);
+}
+header .aboutLinks{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 50px;
+    color: azure;
+    background-color: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(20px);
+}
+header .advanced{
+transition: 0.2s linear;
+}
+header .aboutLinks ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+header .aboutLinks ul li{
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+header .aboutLinks ul li a{
+    color: azure;
+    text-decoration: none;
+}
+header .footerButton{
+    height: 50px;
+    width: 18%;
+}
+header .footerButton button{
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    color: azure;
+    background-color: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+}
+header .footerButton button .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+header .footerButton button .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header .footerButton button:hover{
+    box-shadow: 
+        inset  0px 0px 10px rgb(0, 0, 0);
+}
+header .closeOpen{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    display: none;
+    color: azure;
+    background-color: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.closeOpen .bodymovinanim {
+    width: 60%;
+    height: 60%;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.closeOpen .bodymovinanim svg {
+  width: 100%;
+  height: 100%;
+}
+
+.closeOpen .bodymovinanim svg path {
+  stroke: white !important;
+  fill: none !important;
+}
+
+@media screen and (max-width: 590px) {
+    header .aboutLinks ul li{
+        font-size: 12px;
+    }
+    header .footerButton button .text{
+        font-size: 12px;
+    }
+    header .footerButton button .icon{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 500px) {
+    nav{
+        width: 100%;
+    }
+    header nav .closeOpen{
+        display: flex;
+    }
+    .logoHome{
+        position: absolute;
+        top: 20px;
+        left: 5%;
+    }
+    .footerButton{
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        min-width: 100px;
+        transform: translateX(-50%);
+    }
+    .aboutLinks{
+        position: absolute;
+        top: 80px;
+        min-width: 90%;
+    }
+    
+}
+
+.aboutMe{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutMe .title{
+    width: 50%;
+    margin-top: 20px;
+    color: #858585;
+    font-size: 20px;
+
+}
+.aboutMe .info{
+    width: 50%;
+    color: #b4b4b4;
+    font-size: 20px;
+    font-weight: 600;
+}
+@keyframes reveal-and-hide {
+  0% { scale: 0.9; border-radius: 50px; }
+  27%, 80% { scale: 1; border-radius: 0; } /* Stay "full" in the middle */
+  100% { scale: 0.9; border-radius: 50px; }
+}
+.subject{
+    height: auto;
+    width: 100%;
+    background-color: #161616;
+    margin-top: calc(var(--title-height, 0px) + var(--info-height, 0px) + 100px);
+    animation: reveal-and-hide linear both;
+    animation-timeline: view() ;
+    animation-range: cover 0% cover 100%;
+    padding: 20px;
+}
+.subject .studied{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.subject .studied .head{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subject .studied .head h1{
+    font-size:  clamp(2.3rem, 4.5vw, 4rem);
+    color: #858585;
+}
+.subject .studied .head p{
+    font-size: clamp(1rem, 1.6vw, 3rem);
+    transform: translateY(-50%);
+    color: #b4b4b4;
+}
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    user-select: none;
+    padding: 0 5vw;
+    width: fit-content;
+    margin-top: 50px;
+}
+
+.slide {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 5vw;
+    position: relative;
+    transition: all .7s ease;
+    border-radius: 30px;
+}
+.slide > .photo {
+    width: inherit;
+    height: inherit;
+    transition: all 1s ease;
+}
+.slide > .photo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    filter: brightness(0.3);
+    transition: filter .3s ease;
+}
+.slide > .photo > img:hover {
+    filter: invert(1) brightness(0.9);
+}
+
+/* Smooth color transition for text */
+.slide > .text h2,
+.slide > .text p {
+    transition: color .3s ease;
+}
+
+/* On image hover, make .text h2 and p black */
+.slide:has(> .photo > img:hover) > .text h2,
+.slide:has(> .photo > img:hover) > .text p {
+    color: #000000;
+}
+
+.slide:has(> .photo > img:hover) > .chemtext h2,
+.slide:has(> .photo > img:hover) > .chemtext p {
+    color: #dfdfdf;
+}
+
+/* Fallback for browsers without :has() */
+.slide > .photo:hover ~ .text h2,
+.slide > .photo:hover ~ .text p {
+    color: #000000;
+}
+.slide > .photo:hover ~ .chemtext h2,
+.slide > .photo:hover ~ .chemtext p {
+    color: #dfdfdf;
+}
+.slide > .text {
+    position: absolute;
+    bottom: 20%;
+    right: -50px;
+    color: white;
+    transition: all .4s ease;
+    pointer-events: none; 
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    background: rgba(0, 0, 0, 0.001); /* virtually colorless, triggers backdrop in Safari */
+    border-radius: 16px;              /* smooth edges */
+    padding: 12px 16px;
+    isolation: isolate;
+}
+.slide > .text h2 {
+    font-size: clamp(1rem, 4vw, 4rem);
+    margin-bottom: 0;
+    line-height: 90%;
+}
+.slide > .text p {
+    font-size: clamp(0.5rem, 2vw , 1.3rem);
+    margin-top: .5rem;
+}
+
+/* Press animation */
+.slider:active {
+    cursor: grabbing;
+}
+.slider:active .slide {
+    transform: scale(0.9);
+    margin: 0 0; 
+}
+.slider:active .slide .text {
+    transform: translateX(-40%);
+}
+@media screen and (max-width: 550px) {
+    .slider .slide{
+        height: 35vh;
+        width: 60vw;
+    }
+    .slider .slide:last-child{
+        padding-right: 50vw;
+    }
+    .slide > .photo > img:hover {
+    filter: invert(0);
+    }
+
+    /* Smooth color transition for text */
+    .slide > .text h2,
+    .slide > .text p {
+        transition: color .3s ease;
+    }
+
+    /* On image hover, make .text h2 and p black */
+    .slide:has(> .photo > img:hover) > .text h2,
+    .slide:has(> .photo > img:hover) > .text p {
+        color: #ffffff;
+    }
+
+    /* Fallback for browsers without :has() */
+    .slide > .photo:hover ~ .text h2,
+    .slide > .photo:hover ~ .text p {
+        color: #ffffff;
+    }
+}
+.studying{
+    height: 150vh;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.studying .line{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    height: calc(100vh + 200px);
+    width: 4px;
+    background-color: #3d08b8;
+    border-radius: 20px;
+}
+.studying .line .circle{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #767fff;
+    transition: top 350ms cubic-bezier(0.35, 0.9, 0.4, 0.95);
+
+    pointer-events: none;
+}
+.studying .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+}
+.studying .head h1{
+    font-size: clamp(2.3rem, 4.5vw, 4rem);
+    color: #858585
+}
+.studying .head p{
+    font-size: clamp(1rem, 1.6vw, 3rem);
+    color: #b4b4b4;
+}
+.studying .box{
+    position: absolute;
+    top: 300px;
+    left: 25%;
+    translate: -50% 0;
+    animation-range: entry 35vh entry 65vh;
+}
+.studying .box1{
+    position: absolute;
+    top: calc(300px + 34vh);
+    right: 25%;
+    translate: 50% 0;
+    animation-range: entry 35vh entry 65vh;
+}
+.studying .box2{
+    position: absolute;
+    top: calc(300px + 68vh);
+    left: 25%;
+    translate: -50% 0;
+    animation-range: entry 35vh entry 65vh;
+}
+.fadeLeft{
+    animation: fadeleft both;
+    animation-timeline: view();
+}
+.fadeRight{
+    animation: faderight both;
+    animation-timeline: view();
+}
+@keyframes fadeleft {
+    from{
+        opacity: 0;
+        transform: translateX(50%) scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes faderight{
+    from{
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.studying .boxdesign{
+    border-radius: 20px;
+    background-color: none;
+    border: 0px;
+    border-color: transparent;
+    height: 30vh;
+    width: 30vw;
+}
+:root {
+  --clr-1: #2f00ff;
+  --clr-2: #6f00ff;
+  --clr-3: #ea00ff;
+}
+.boxdesign::before {
+    content: "";
+    position: absolute;
+    inset: -1px; /* Makes the shadow slightly larger than the div */
+    z-index: -1; /* Places it behind the card */
+    background: linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-1));
+    background-size: 400% 400%;
+    border-radius: 20px; /* Matches the card's rounded corners */ /* This creates the "shadow" look */
+    opacity: 0.8;
+    border: 0px;
+    animation: glow-animation 5s linear infinite;
+}
+
+@keyframes glow-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.studying .boxdesign .boxfrontdesign{
+    width: 100%;
+    height: 100%;
+    background-color: #000000da;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 0px;
+}
+.studying .boxfrontdesign h2{
+    position: relative;
+    color: #adadad;
+    top: 15px;
+    left: 25px
+}
+.studying .boxfrontdesign .holder{
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    background-color: #00000086;
+    border-radius: 10px;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+}
+.studying .boxfrontdesign h3{
+    position: relative;
+    color: #858585;
+    top: 10px;
+    left: 15px
+}
+.studying .boxfrontdesign p{
+    position: absolute;
+    color: #d3d3d3;
+    top: 55%;
+    left: 50%;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.maps{
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.maps .header_maps{
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin-top: 15vh;
+}
+.maps .header_maps h1{
+    font-size: clamp(2.3rem, 4.5vw, 4rem);
+    font-weight: 400;
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 60px;
+    color: #5487b6;
+}
+.maps .header_maps p{
+    margin-top: 20px;
+    font-size: clamp(1rem, 1.6vw, 3rem);
+    width: 50%;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #515d68;
+}
+.map_and_info {
+    margin-top: 15vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    width: 90%;
+    z-index: 1;
+}
+.map {
+    width: 90%;
+    height: 70vh;
+    background: #161616;
+    border-radius: 20px;
+}
+
+.map_container, 
+.sticky-text-wrapper {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    position: relative; /* This defines the total scrolling height */
+}
+
+/* These create the physical scroll length */
+.step_trigger {
+    height: 100vh;
+}
+
+.content {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    /* Default: Coming from bottom */
+    transform: translateY(-50%) scale(0.95);
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), 
+                opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.content.is-first {
+    opacity: 0; 
+}
+
+/* --- ACTIVE STATE (The Fix) --- */
+.content.active {
+    opacity: 1 !important;
+    /* We MUST keep -50% here so the card stays centered while active */
+    transform: scale(1) !important;
+    z-index: 20;
+    visibility: visible;
+}
+/* --- EXIT STATE --- */
+.content.exit {
+    opacity: 0 !important;
+    /* -50% to stay centered, -50px to slide up out of view */
+    transform: scale(0.95) !important;
+    z-index: 10;
+}
+
+/* --- THE LAST CARD --- */
+/* Ensure it doesn't fade or move once it hits the exit state */
+.content.is-last.exit {
+    opacity: 1 !important;
+    transform: translateY(-50%) scale(1) !important;
+}
+.custom-marker {
+    background-color: #00008b; /* Dark Blue */
+    border: 2px solid #3498db; /* Light Blue Border */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+.map {
+    /* Use aspect-ratio to keep it a square */
+    width: 80%;
+    aspect-ratio: 1 / 1; 
+    max-height: 80vh; /* Prevents it from being taller than the screen */
+    border-radius: 20px;
+    overflow: hidden;
+}
+.map-label {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 1px solid #3498db;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+#world-map {
+    background: #000 !important;
+}
+
+/* Force Leaflet tile panes to have a black background */
+.leaflet-tile-pane {
+    background: #000 !important;
+}
+
+/* Smooth out the tile loading opacity */
+.leaflet-tile {
+    filter: brightness(0.8) contrast(1.2);
+    transition: opacity 0.3s zoom-in;
+}
+
+
+
+.weather {
+    height: auto;
+    margin-top: 25vh; /* Reduced from 770vh to avoid scroll glitches */
+    min-height: 80vh; /* Enough space for header (20vh) + app (50vh) */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10; /* Ensure it stays above previous sticky sections */
+}
+.weather_header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+.weather_header h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-left: 25%;
+    color: #ffffff;
+    z-index: 10;
+}
+.weather_header .weather_widget_line{
+    margin-bottom: calc(20vh - 4px);
+    height: 4px;
+    background-color: #001652;
+    width: 5%;
+    position: absolute;
+    left: 25%;
+    z-index:11;
+    border-radius: 10px;
+}
+.weather_header .weather_widget{
+    height: 20vh;
+    right: 50px;
+    width: 65%;
+    background-color: #001652;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 20px;
+}
+.weather_header .weather_widget .widget{
+    height: 90%;
+    width: 80%;
+    margin-right: 10px;
+    background-color: #00030a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.weather_header .weather_widget .widget .box{
+    height: auto;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather_header .weather_widget .widget .box p{
+    color: white;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    line-height: 15px;
+    margin-top: 10px;
+}
+
+
+:root {
+    --bg-color: #001652;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --accent-blue: #00030a;
+    --text-main: #f8fafc;
+}
+
+.weather-app {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg-color);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 2rem;
+    width: 70%;
+    color: var(--text-main);
+    margin-top: 20vh; 
+    position: relative;
+    
+    /* THE FIX: Fixed height and Flex layout */
+    height: auto;
+    min-height: 94vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Keeps content centered when small */
+    overflow: hidden; 
+    z-index: 1;
+
+    will-change: height, width, border-radius;
+
+    transition: height 0.8s cubic-bezier(0.33, 1, 0.68, 1), 
+                width 0.8s cubic-bezier(0.33, 1, 0.68, 1),
+                border-radius 0.8s ease;
+}
+.weather-app.expanded {
+    height: 100vh;
+    width: 100%; /* Optional: expand to full width like Apple's transition */
+    border-radius: 0px; /* Removes rounded corners as it hits full screen */
+}
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Pushes video behind all text/grids */
+}
+
+#weather-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Forces video to fill container without stretching */
+    pointer-events: none;
+}
+
+/* Dark Overlay to ensure high text contrast */
+.video-bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507); /* Adjust opacity based on your video's brightness */
+}
+.weather-display {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.weather-display::-webkit-scrollbar{
+    display: none;
+}
+.search-box {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+    margin-top: 0px;
+    margin-bottom: 2rem;
+    width: 50%;
+    margin-left: calc(54%);
+    transform: translateX(-50%);
+
+    will-change: width, margin-top, margin-left;
+    
+    /* Smooth transition for layout properties */
+    transition: 
+        width 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        margin-top 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        margin-left 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.search-box.expanded {
+    margin-top: 8vh;
+    margin-left: 51%;
+    width: 40%;
+}
+
+.input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.suggestions-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.suggestions-list::-webkit-scrollbar {
+    width: 6px;
+}
+.suggestions-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.suggestions-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+.suggestions-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.suggestion-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+}
+
+.suggestion-item.active, 
+.suggestion-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.suggestion-item span {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-left: 8px;
+}
+
+#city-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    -webkit-backdrop-filter: blur(20px);
+
+    padding: 10px 15px;
+    border-radius: 12px;
+    color: white;
+    outline: none;
+    width: 100%;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
+
+#search-btn {
+    background: var(--accent-blue);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#search-btn:active { transform: scale(0.95); }
+
+.info-no-data{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+
+}
+
+.main-info { text-align: center; margin:0 auto 2rem auto; display: none; width: 70%; flex-direction: column; align-items: center;}
+.main-info h2 { font-size: 1.8rem; margin: 0; }
+.temp-container { font-size: 4rem; font-weight: 800; color: var(--accent-blue); }
+#condition { text-transform: capitalize; opacity: 0.8; font-size: 1.1rem; }
+
+.details-grid {
+    display: none; /* Changed to grid in JS */
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, 300px);
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    max-width: 900px; /* Adjust this based on your overall page width (300*3 + gaps) */
+    margin:auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.details-grid::-webkit-scrollbar{
+    display: none;
+}
+
+.detail-item {
+    height: 300px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.048);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.compass-card {
+    padding: 15px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+
+.compass-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    opacity: 0.6;
+    align-self: flex-start;
+    color: #fff;
+}
+
+.compass {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tick Container Logic */
+.ticks-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tick {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1.5px;
+    height: 6px; /* Tick length */
+    background: rgba(255, 255, 255, 0.1); /* Default dark tick */
+    transform-origin: 0 100px; /* Rotate around compass center */
+    transform: translateX(-50%);
+}
+
+/* Specific Tick Colors */
+.tick.major { background: rgb(216, 216, 216); } /* 90 deg */
+.tick.semi { background: rgba(255, 255, 255, 0.4); } /* 30 deg */
+
+.cardinals span {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    transform: translate(-50%, -50%);
+}
+
+.n { top: 7%; left: 50%; text-align: center;}
+.e { top: 49.5%; left: 93%; text-align: center;}
+.s { top: 92%; left: 49.5%; text-align: center;}
+.w { top: 49%; left: 9%; text-align: center;}
+
+/* North Arrow: Matching the height of the tick circumference */
+.n::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 7px solid #ffffff; /* Height matches width on circumference */
+}
+
+.hub { z-index: 5; display: flex; align-items: center; color: #fff; }
+.degree-val { font-size: 1.4rem; font-weight: 700; line-height: 1; }
+.degree-unit { font-size: 1.7rem; margin-left: 1px; }
+
+/* Needle with center cut-out */
+.needle-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.needle-top{
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateX(-50%);
+}
+.needle-bottom {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateX(-50%);
+}
+
+.needle-top { top: 0; height: 65px; width:3px; }
+.needle-bottom { bottom: 0; height: 65px; width: 3px; }
+
+.needle-arrow {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 14px solid #fff;
+}
+
+.needle-circle {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-53%);
+    width: 12px;
+    height: 12px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+}
+
+#weather {
+    pointer-events: all;
+    position: relative;
+    z-index: 100; /* Higher than the Map's sticky triggers */
+}
+
+.detail-item .label { 
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+    /* Typography matches Apple Weather style */
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    opacity: 0.5;
+    color: #fff;
+    
+    /* Reset any inherited margins */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.detail-item .value { font-size: 2rem; font-weight: 600; }
+
+.space{
+    height: 20vh;
+    background-color: #000;
+}
+
+footer{
+    height: 500px;
+    width: 100%;
+    background-color: #060708;
+    position: relative;
+    z-index: 10;
+}
+footer .footerContainer{
+    background-color: #060708;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+footer .footerContainer .getInTouch{
+    width: 25%;
+    height: 80%;
+    padding-top: 20px;
+}
+footer .footerContainer .getInTouch h1{
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .footerContainer .getInTouch p{
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+footer .footerContainer .getInTouch form{
+    width: 100%;
+    margin-top: 20%;
+}
+footer .footerContainer .getInTouch .nameHolder{
+    width: 50%;
+    background-color: #1d1d1f;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+footer .footerContainer .getInTouch .emailHolder{
+    background-color: #1d1d1f;
+    padding: 5px 5px 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+footer .footerContainer .getInTouch input{
+    width: 70%;
+    height: 35px;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;
+    border: none;
+}
+footer .footerContainer .getInTouch button{
+    width: 30%;
+    border-radius: 15px;
+    border: none;
+    background-color: #f8d32e;
+    color: #000000;
+    font-style: bold;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+footer .footerContainer .connect{
+    width: 25%;
+    height: 80%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footerContainer .connect h1{
+    color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    text-align: center;
+}
+
+footer .footerContainer .connect .appsHolder{
+    width: 130px;
+    display: flex;
+    color: #ffffff;
+    margin-top: 20%;
+    background-color: #1d1d1f;
+    height: 70px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px
+}
+footer .footerContainer .connect .appsHolder .logoHolder{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;    
+    font-size: 30px;
+}
+footer .footerContainer .connect .appsHolder .logoHolder a{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+footer .footerContainer .connect .appsHolder .instaHolder a{
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    font-size: 40px
+}
+footer .footerContainer .connect .appsHolder .gitHubHolder a{
+    background-color: #000000;
+}
+footer .footerContainer .connect .appsHolder .instaHolder{
+    transition: ease-out 0.4s;
+    cursor: pointer;
+}
+footer .footerContainer .connect .appsHolder .gitHubHolder{
+    transition: ease-out 0.4s;
+    cursor: pointer;
+}
+footer .footerContainer .connect .appsHolder .instaHolder:hover{
+    margin-bottom: 40px;
+    scale: 1.2;
+}
+footer .footerContainer .connect .appsHolder .gitHubHolder:hover{
+    margin-bottom: 40px;
+    scale: 1.2;
+}
+footer .footerContainer .info{
+    width: 25%;
+    height: 80%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footerContainer .info h1{
+    color: rgba(255, 255, 255, 0.8) ;
+    width: 100%;
+    text-align: center;
+}
+footer .footerContainer .info p{
+    color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    margin-top: 10%;
+    font-size: 20px;
+}
+footer .footerContainer .info span{
+    font-weight: 800;
+}
+@media screen and (max-width: 1400px) {
+    footer .footerContainer .getInTouch .nameHolder{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1270px) {
+    footer, footer .footerContainer{
+        height: 600px;
+    }
+    
+}
+@media screen and (max-width: 850px) {
+    footer,footer .footerContainer{
+        height: 120vh;
+    }
+    footer .footerContainer{
+        flex-direction: column;
+        padding: 20px;
+        padding-bottom: 200px;
+
+    }
+    footer .footerContainer .getInTouch, footer .footerContainer .connect,footer .footerContainer .info{
+        width: 95%;
+    }
+    .info, .getInTouch, .connect{
+        height: 300px;
+    }
+    footer .footerContainer .info p, footer .footerContainer .connect .appsHolder, footer .footerContainer .getInTouch form{
+        margin-top: 50px;
+    }
+    footer .footerContainer .getInTouch p, footer .footerContainer .getInTouch h1{
+        text-align: left;
+    }
+}   
